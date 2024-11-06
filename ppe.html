@@ -6,8 +6,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Portfolio</title>
     <style>
         /* Estilo Geral */
         * {
@@ -25,21 +23,6 @@
         .interface {
           max-width: 1280px;
           margin: 0 auto;
-        }
-
-        .flex {
-          display: flex;
-        }
-
-        .btn-contato button {
-          padding: 10px 40px;
-          font-size: 18px;
-          font-weight: 600;
-          background-color: rgb(252, 255, 66);
-          border: 0;
-          border-radius: 30px;
-          cursor: pointer;
-          transition: .2s;
         }
 
         /* Cabeçario */
@@ -65,16 +48,47 @@
           transform: scale(1.07);
         }
 
-        header nav ul {
-          list-style-type: none;
+        .navbar {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          background-color: #178fff;
+          padding: 10px 20px;
         }
 
-        header nav ul li {
-          display: inline-block;
-          padding: 0 60px;
+        .navbar img {
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+        }
+
+        .navbar ul {
+          display: flex;
+        }
+
+        .navbar li {
+          list-style: none;
+          margin: 0 15px;
+        }
+
+        .navbar a {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
         }
 
         /* BOTÃO CONTATO */
+        .btn-contato button {
+          padding: 10px 40px;
+          font-size: 18px;
+          font-weight: 600;
+          background-color: rgb(252, 255, 66);
+          border: 0;
+          border-radius: 30px;
+          cursor: pointer;
+          transition: .2s;
+        }
+
         .btn-contato button:hover {
           box-shadow: 0px 0px 8px rgba(0, 255, 255, 0.74);
           transform: scale(1.07);
@@ -83,12 +97,6 @@
         /* ESTILO DO TOPO DO SITE */
         section.topo-do-site {
           padding: 40px 4%;
-        }
-
-        section.topo-do-site .flex {
-          align-items: center;
-          justify-content: center;
-          gap: 90px;
         }
 
         .topo-do-site h1 {
@@ -101,8 +109,6 @@
           color: white;
           margin: 40px 0;
         }
-
-        /* Estilos Adicionais */
 
         /* Logo */
         .logo {
@@ -168,7 +174,7 @@
                     <img src="images/logo.jpg" alt="Logo do Portfolio">
                 </a>
             </div><!--logo-->
-            <nav class="menu-desktop">
+            <nav class="navbar">
                 <ul>
                     <li><a href="index.html">Início</a></li>
                     <li><a href="curriculo.html">Currículo</a></li>
