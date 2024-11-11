@@ -1,282 +1,211 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <style>
         /* Estilo Geral */
         * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-          background-color: #050303;
-          height: 100vh;
+            background-color: #050303;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px; /* Adicionando padding ao body */
         }
 
         .interface {
-          max-width: 1280px;
-          margin: 0 auto;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            width: 100%; /* Garantindo que a interface use 100% da largura disponível */
         }
 
-        /* Cabeçario */
         header {
-          padding: 40px 4%;
+            width: 95%;
+            padding: 8px 0; /* Padding superior e inferior */
+            background-color: #32a4dd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 20px; /* Adicionando padding à esquerda */
+            padding-right: 20px; /* Adicionando padding à direita */
         }
 
-        header > .interface {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+        header .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
         }
 
-        header a {
-          color: rgb(255, 255, 255);
-          text-decoration: none;
-          display: inline-block;
-          transition: .2s;
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
         }
 
-        header a:hover {
-          color: rgb(236, 255, 67);
-          transform: scale(1.07);
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s;
         }
 
-        .navbar {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          background-color: #178fff;
-          padding: 10px 20px;
+        header nav ul li a:hover {
+            color: #ecff43;
         }
 
-        .navbar img {
-          border-radius: 50%;
-          width: 50px;
-          height: 50px;
-        }
-
-        .navbar ul {
-          display: flex;
-        }
-
-        .navbar li {
-          list-style: none;
-          margin: 0 15px;
-        }
-
-        .navbar a {
-          color: white;
-          text-decoration: none;
-          font-weight: bold;
-        }
-
-        /* BOTÃO CONTATO */
         .btn-contato button {
-          padding: 10px 40px;
-          font-size: 18px;
-          font-weight: 600;
-          background-color: rgb(252, 255, 66);
-          border: 0;
-          border-radius: 30px;
-          cursor: pointer;
-          transition: .2s;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            background-color: #fcff42;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .btn-contato button:hover {
-          box-shadow: 0px 0px 8px rgba(0, 255, 255, 0.74);
-          transform: scale(1.07);
+            box-shadow: 0px 0px 8px rgba(0, 255, 255, 0.74);
+            transform: scale(1.07);
         }
 
-        /* ESTILO DO TOPO DO SITE */
-        section.topo-do-site {
-          padding: 40px 4%;
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
         }
 
-        .topo-do-site h1 {
-          color: white;
-          font-size: 34px;
-          line-height: 40px;
+        .card {
+            background-color: #070303;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .topo-do-site .txt-topo-site p {
-          color: white;
-          margin: 40px 0;
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
         }
 
-        /* Logo */
-        .logo {
-          margin-right: 20px;
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
         }
 
-        .logo img {
-          max-width: 100px;
-          height: auto;
+        .card button {
+            margin: 20px 0;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            background-color: #fcff42;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        /* Container de Texto-Imagem */
-        .texto-imagem-container {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
+        .card button:hover {
+            box-shadow: 0px 0px 8px rgba(0, 255, 255, 0.74);
+            transform: scale(1.07);
         }
-
-        /* Texto-Imagem */
-        .texto-imagem {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .texto-imagem .imagem {
-          margin-bottom: 20px;
-        }
-
-        .texto-imagem .btn-contato {
-          display: flex;
-          justify-content: center;
-        }
-
-        /* Estilos Modificados */
-
-        .textos-imagem {
-          width: 100%;
-          padding: 40px 0;
-          background-color: #070303;
-        }
-
-        .textos-imagem .texto-imagem {
-          width: 100%;
-          max-width: 300px;
-        }
-
-        .textos-imagem .texto-imagem .imagem img {
-          width: 100%;
-        }
-
-        .textos-imagem .texto-imagem .btn-contato {
-          margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-    
-    <header>
-        <div class="interface">
-            <div class="logo">
-                <a href="#">
-                    <img src="images/logo.jpg" alt="Logo do Portfolio">
-                </a>
-            </div><!--logo-->
-            <nav class="navbar">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="curriculo.html">Currículo</a></li>
-                    <li><a href="portfolios.html">Portfolios</a></li>
-                </ul>
-            </nav>
-
-            <div class="btn-contato">
-                <a href="#">
-                    <button>Contato</button>
-                </a>
-            </div><!--btn-contato-->
-        </div><!--interface-->
-
-    </header>
-
-    <main>
-        <section class="textos-imagem">
-            <div class="interface">
-                <div class="texto-imagem-container">
-                    <div class="texto-imagem">
-                        <div class="imagem">
-                            <img src="images/Natureza.jpg" alt="Imagem">
-                        </div>
-                        <div class="btn-contato">
-                            <a href="natureza.html">
-                                <button>Ciências da Natureza</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="textos-imagem">
-            <div class="interface">
-                <div class="texto-imagem-container">
-                    <div class="texto-imagem">
-                        <div class="imagem">
-                            <img src="images/Humanas.jpg" alt="Imagem">
-                        </div>
-                        <div class="btn-contato">
-                            <a href="humanas.html">
-                                <button>Ciências Humanas</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="textos-imagem">
-            <div class="interface">
-                <div class="texto-imagem-container">
-                    <div class="texto-imagem">
-                        <div class="imagem">
-                            <img src="images/Matemática.jpg" alt="Imagem">
-                        </div>
-
-                        <div class="btn-contato">
-                            <a href="matematica.html">
-                                <button>Matemática</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="textos-imagem">
-            <div class="interface">
-                <div class="texto-imagem-container">
-                    <div class="texto-imagem">
-                        <div class="imagem">
-                            <img src="images/Linguagens.jpg" alt="Imagem">
-                        </div>
-                        <div class="btn-contato">
-                            <a href="linguagens.html">
-                                <button>Linguagens</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="textos-imagem">
-            <div class="interface">
-                <div class="texto-imagem-container">
-                    <div class="texto-imagem">
-                        <div class="imagem">
-                            <img src="images/Programação.jpg" alt="Imagem">
-                        </div>
-                        <div class="btn-contato">
-                            <a href="tecnico.html">
-                                <button>Técnico</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-</body>
+  </style>
+ </head>
+ <body>
+  <header>
+   <div class="logo">
+    <a href="#">
+     <img alt="Logo do Portfolio" height="50" src="/images/logo.jpg" width="50"/>
+    </a>
+   </div>
+   <nav>
+    <ul>
+     <li>
+      <a href="index.html">
+       Início
+      </a>
+     </li>
+     <li>
+      <a href="curriculo.html">
+       Currículo
+      </a>
+     </li>
+     <li>
+      <a href="portfolios.html">
+       Portfolios
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div class="btn-contato">
+    <a href="#">
+     <button>
+      Contato
+     </button>
+    </a>
+   </div>
+  </header>
+  <main>
+   <div class="card">
+    <img alt="Imagem representando Ciências da Natureza" height="200" src="/images/Natureza.jpg" width="300"/>
+    <a href="natureza.html">
+     <button>
+      Ciências da Natureza
+     </button>
+    </a>
+   </div>
+   <div class="card">
+    <img alt="Imagem representando Ciências Humanas" height="200" src="/images/Humanas.jpg" width="300"/>
+    <a href="humanas.html">
+     <button>
+      Ciências Humanas
+     </button>
+    </a>
+   </div>
+   <div class="card">
+    <img alt="Imagem representando Matemática" height="200" src="/images/Matemática.jpg" width="300"/>
+    <a href="matematica.html">
+     <button>
+      Matemática
+     </button>
+    </a>
+   </div>
+   <div class="card">
+    <img alt="Imagem representando Linguagens" height="200" src="/images/Linguagens.jpg" width="300"/>
+    <a href="linguagens.html">
+     <button>
+      Linguagens
+     </button>
+    </a>
+   </div>
+   <div class="card">
+    <img alt="Imagem representando Técnico" height="200" src="/images/Programação.jpg" width="300"/>
+    <a href="tecnico.html">
+     <button>
+      Técnico
+     </button>
+    </a>
+   </div>
+  </main>
+ </body>
 </html>
