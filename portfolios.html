@@ -1,53 +1,196 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Portfolio</title>
-</head>
-<body>
-    
-    <header>
-        <div class="interface">
-            <div class="logo">
-                <a href="#">
-                    <img src="images/logo.jpg" alt="Logo do Portfolio">
-                </a>
-            </div><!--logo-->
-            <nav class="menu-desktop">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="curriculo.html">Currículo</a></li>
-                    <li><a href="ppe.html">Áreas do Conhecimento</a></li>
-                </ul>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        /* Estilo Geral */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-            </nav>
+        body {
+            background-color: #050303;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px; /* Adicionando padding ao body */
+        }
 
-            <div class="btn-contato">
-                <a href="#">
-                    <button>Contato</button>
-                </a>
-            </div><!--btn-contato-->
-        </div><!--interface-->
+        .interface {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            width: 100%; /* Garantindo que a interface use 100% da largura disponível */
+        }
 
-    </header>
+        header {
+            width: 95%;
+            padding: 3px 0; /* Padding superior e inferior */
+            background-color: #32a4dd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 20px; /* Adicionando padding à esquerda */
+            padding-right: 20px; /* Adicionando padding à direita */
+        }
 
-        <main>
-            <div class="btn-trimestre">
-              <a href="https://docs.google.com/presentation/d/1iwv9QlBs-tIjB-7xcCUQDSDkQXrZx-a0XRm5ETDPefY/edit?usp=sharing">
-                <button>Primeiro Ano</button>
-              </a>
-              <a href="https://docs.google.com/presentation/d/17x7p_Zkxt_pQ5GPPVrS7mryfRgG2CbOlZpROh-uHtI0/view">
-                <button>Segundo Segundo</button>
-              </a>
-              <a href="index.html">
-                <button>Terceiro Ano</button>
-              </a>
-            </div>
-          </main>
-    </body>
-    </html>
+        header .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 60px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+
+        header nav ul li a:hover {
+            color: #ecff43;
+        }
+
+        .btn-contato button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            background-color: #fcff42;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-contato button:hover {
+            box-shadow: 0px 0px 8px rgba(0, 255, 255, 0.74);
+            transform: scale(1.07);
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #070303;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            padding-top: 75px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px rgb(1, 18, 255);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card button {
+            margin: 20px 0;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            background-color: #fcff42;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card button:hover {
+            box-shadow: 0px 0px 8px rgba(0, 255, 255, 0.74);
+            transform: scale(1.07);
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <div class="logo">
+    <a href="#">
+     <img alt="Logo do Portfolio" height="50" src="/images/logo.jpg" width="50"/>
+    </a>
+   </div>
+   <nav>
+    <ul>
+     <li>
+      <a href="/index.html">
+       Início
+      </a>
+     </li>
+     <li>
+      <a href="/curriculo.html">
+       Currículo
+      </a>
+     </li>
+     <li>
+      <a href="/ppe.html">
+       Areas do Conhecimento
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div class="btn-contato">
+    <a href="/index.html">
+     <button>
+      Voltar
+     </button>
+    </a>
+   </div>
+  </header>
+  <main>
+   <div class="card">
+    <img alt="Imagem representando Ciências da Natureza" height="200" src="/images/Programação.jpg" width="300"/>
+    <a href="https://docs.google.com/presentation/d/1iwv9QlBs-tIjB-7xcCUQDSDkQXrZx-a0XRm5ETDPefY/edit?usp=sharing">
+     <button>
+      Primeiro Ano
+     </button>
+    </a>
+   </div>
+   <div class="card">
+    <img alt="Imagem representando Ciências Humanas" height="200" src="/images/Programação.jpg" width="300"/>
+    <a href="https://docs.google.com/presentation/d/17x7p_Zkxt_pQ5GPPVrS7mryfRgG2CbOlZpROh-uHtI0/view">
+     <button>
+      Segundo Ano
+     </button>
+    </a>
+   </div>
+   <div class="card">
+    <img alt="Imagem representando Matemática" height="200" src="/images/Programação.jpg" width="300"/>
+    <a href="index.html">
+     <button>
+      Terceiro Ano
+     </button>
+    </a>
+   </div>
+  </main>
+ </body>
+</html>
