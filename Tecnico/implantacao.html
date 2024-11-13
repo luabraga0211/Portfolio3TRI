@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        /* Estilos CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #050303;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+        }
+
+        .interface {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        header {
+            width: 95%;
+            padding: 3px 0;
+            background-color: #32a4dd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        header .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+
+        header nav ul li a:hover {
+            color: #ecff43;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #070303;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            padding: 20px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px rgb(1, 18, 255);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .card h2 {
+            margin: 10px 0;
+        }
+
+        .card p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .card button {
+            margin: 20px 0;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            background-color: #fcff42;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card button:hover {
+            box-shadow: 0px 0px 8px rgba(0, 255, 255, 0.74);
+            transform: scale(1.07);
+        }
+        .btn-contato button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            background-color: #fcff42;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-contato button:hover {
+            box-shadow: 0px 0px 8px rgba(0, 255, 255, 0.74);
+            transform: scale(1.07);
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a href="#">
+            <img alt="Logo do Portfolio" height="50" src="/images/logo.jpg" width="50"/>
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/index.html">Início</a></li>
+            <li><a href="/curriculo.html">Currículo</a></li>
+            <li><a href="/portfolios.html">Portfolios</a></li>
+        </ul>
+    </nav>
+    <div class="btn-contato">
+        <a href="/ppe.html">
+            <button>Voltar</button>
+        </a>
+    </div>
+</header>
+<main>
+    <div class="card">
+        <img src="/images/implantacao.png" alt="Imagem representativa"/>
+        <h2>Atividade 1</h2>
+        <p>Cenário 1, atividade 1, Implantação de um Sistema Para Gerenciamento de Conteúdo - CMS <br> H1 a H10 Trabalhadas. <br> Realizar a implantação de um sistema para gerenciamento de conteúdo na plataforma citada pelo Professor, e entregar o link.</p>
+        <a href="https://docs.google.com/document/d/1OqDubutldDrpxGsj94ez8f7Hwl6IZ0hO2KH2S30M_5E/edit#heading=h.yppmmx3l3ios">
+            <button>Documento com a apresentação</button>
+        </a>
+    </div>
+
+</main>
+</body>
+</html>
